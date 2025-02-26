@@ -1,0 +1,11 @@
+.back-app {
+    background-image: url("../../public/pexels-ahmetyuksek-30289797.jpg");
+    background-size: cover; 
+}
+header {
+    background-color: transparent;
+    transition: all 0.8 linear;
+}
+header:hover {
+    background-color: rgba(255, 255, 255, 0.098);
+}
