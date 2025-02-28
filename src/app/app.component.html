@@ -1,17 +1,23 @@
-<div class="back-app w-[100vw] h-[100vh]">
-    <header class="w-full md:px-6 md:h-[10vh] md:flex md:flex-row md:justify-between md:items-center">
+<div #backApp class="back-app w-[100vw] h-[100vh] overflow-y-auto">
+    <header [class.scrolled]="scrolled"
+        class="md:sticky z-100 top-0 left-0 w-full md:px-6 md:h-[10vh] md:flex md:flex-row md:justify-between md:items-center transition-all duration-300">
         <div class="logo-page">
             <h1 class=" text-white md:font-medium md:text-lg md:text-center">🐓 {{logoPage}}</h1>
         </div>
         <nav class="hidden md:flex px-6 justify-center">
             <ul class="md:p-0 md:m-0 flex flex-row items-center gap-8">
+                <li class="pr-6">
+                    <a class="translate-a flex justify-center items-center w-[18px] h-auto tracking-wide" href="#work">
+                        <mat-icon>translate</mat-icon>
+                    </a>
+                </li>
                 <li><a class="tracking-wide" href="#work">Work</a></li>
                 <li><a class="tracking-wide" href="#about">About</a></li>
                 <li><a class="tracking-wide" href="#cv">CV</a></li>
             </ul>
         </nav>
     </header>
-    <main class="relative h-[90vh] w-full flex flex-col justify-center items-center">
+    <main class="relative h-[90vh] w-full flex flex-col justify-center pl-20">
         <div class="my-4">
             <h2 class="tracking-wide text-5xl font-semibold">
                 Hi!, I'm Brian
@@ -22,17 +28,272 @@
                 Full Stack Developer based in Tandil, (Bs As, Argentina).
             </p>
         </div>
-        <div class="w-[76%]">
-            <p class="tracking-wide text-ms font-normal text-center">
-                I am 24 years old and I consider myself a proactive, responsible and creative person. I am looking to collaborate in a great team, contribute ideas and learn from experienced professionals. I am always in constant learning.
+        <div class="w-[52%]">
+            <p class="tracking-wide text-ms font-thin">
+                I am 24 years old and I consider myself a proactive, responsible and creative person. I am looking to
+                collaborate in a great team, contribute ideas and learn from experienced professionals. I am always in
+                constant learning.
             </p>
         </div>
-        <div class="w-[76%] flex flex-col items-center pt-30 gap-6">
-            <p class="tracking-wide text-ms font-normal text-center">
-                What are you waiting for to get to know me better?
-            </p>
-            <mat-icon>arrow_downward</mat-icon>
+        <div class="get-to-know-me relative w-[76%] flex flex-row py-8 gap-6">
+            <a target="_blank" [href]="linkLinkedin">
+                <div class="w-[24px] h-auto">
+                    <img class="icon-contact w-full h-auto" src="LINKEDIN_icon-icons.com_65488.svg"
+                        alt="linkedin-icon-svg">
+                </div>
+            </a>
+            <a target="_blank" [href]="linkGitHub">
+                <div class="w-[24px] h-auto">
+                    <img class="icon-contact w-full h-auto" src="GITHUB_icon-icons.com_65505.svg" alt="github-icon-svg">
+                </div>
+            </a>
+            <a>
+                <div class="w-[24px] h-auto">
+                    <img class="icon-contact w-full h-auto" src="gmail_icon-icons.com_65490.svg" alt="gmail-icon-svg">
+                </div>
+            </a>
         </div>
     </main>
+    <article class="flex flex-col pl-20 py-8">
+        <div class="cont-title-section flex flex-row items-center mb-6">
+            <mat-icon>work</mat-icon>
+            <h3 class="text-[22px] tracking-wide font-medium ">
+                WORK EXPERIENCE
+            </h3>
+        </div>
+        <div>
+            <ul class="flex flex-col gap-10 p-0 m-0">
+                <li>
+                    <aside>
+                        <div class="max-w-xl p-6 bg-[#0000008f] border border-[#ffffff27] rounded-lg shadow-sm">
+                            <h5 class="mb-1 text-2xl font-medium tracking-wider text-nowrap">
+                                Full Stack Developer - <span class="text-[#1DAB68]">Tercer Piso</span></h5>
+                            <p class="mb-3 text-[14px] font-thin text-gray-100">
+                                ( June - November, 2024 )
+                            </p>
+                            <p class="mb-3 font-normal text-gray-200">
+                                - Support area. Maintenance
+                                and development of new features in web
+                                applications using Angular, and backend services
+                                with NestJS, Java/Spring, Python, PostgreSQL, and Elasticsearch,
+                                among other technologies.
+                                -In my role, I developed critical hotfixes, features,
+                                and continuously implemented improvements
+                            </p>
+                            <div>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-gray-700 text-gray-300">NestJs</span>
+                                <span
+                                    class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-red-900 text-red-300">Angular</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-orange-900 text-orange-300">Java</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-green-900 text-green-300">Spring</span>
+                                <span
+                                    class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-blue-900 text-blue-300">PostgreSQL</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-purple-900 text-purple-300">Python</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-yellow-900 text-yellow-300">ElasticSearch</span>
+                            </div>
+                        </div>
+                    </aside>
+                </li>
+                <li>
+                    <aside>
+                        <div class="max-w-xl p-6 bg-[#0000008f] border border-[#ffffff27] rounded-lg shadow-sm">
+                            <h5 class="mb-1 text-2xl font-medium tracking-wider text-nowrap">
+                                Full Stack Developer - <span class="text-blue-400">Bengalu</span></h5>
+                            <p class="mb-3 text-[14px] font-thin text-gray-100">
+                                ( 2024 - 2025 )
+                            </p>
+                            <p class="mb-3 font-normal text-gray-200">
+                                - Full Participation in the design and development of a mobile app using React Native,
+                                Expo, and backend services with NestJs, Java/Spring, PostgreSQL,
+                                among other technologies.
+                                -In my role, I developed fixes, features,
+                                and continuously implemented improvements
+                            </p>
+                            <div>
+                                <span
+                                    class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-sky-900 text-sky-300">React
+                                    Native</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-gray-700 text-gray-300">Expo</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-orange-900 text-orange-300">Java</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-green-900 text-green-300">Spring</span>
+                                <span
+                                    class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-blue-900 text-blue-300">PostgreSQL</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-red-900 text-red-300">NestJs</span>
+                                <span
+                                    class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-pink-900 text-pink-300">Figma</span>
+                            </div>
+                            <a target="_blank" [href]="linkPostBengalu"
+                                class="mt-6 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-emerald-600 bg-emerald-700 focus:ring-emerald-800">
+                                Read more
+                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </aside>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <article class="flex flex-col pl-20 py-8 mt-8">
+        <div class="cont-title-section flex flex-row items-center mb-6">
+            <mat-icon>stars</mat-icon>
+            <h3 class="text-[22px] tracking-wide font-medium ">
+                PROJECTS, CHALLENGES AND MORE
+            </h3>
+        </div>
+        <div>
+            <ul class="flex flex-col gap-10 p-0 m-0">
+                <li>
+                    <aside>
+                        <div class="max-w-5xl p-6 bg-[#0000008f] border border-[#ffffff27] rounded-lg shadow-sm flex flex-row gap-6">
+                            <div class="flex flex-col">
+                                <h5 class="mb-1 text-2xl font-medium tracking-wider text-nowrap">
+                                    Techforb Full Stack Challenge</h5>
+                                <p class="mb-3 text-[14px] font-thin text-gray-100">
+                                    ( February, 2025 )
+                                </p>
+                                <p class="mb-3 font-normal text-gray-200">
+                                    - Techforb asked me to do a challenge for their selection process. 
+                                    I had to create an application with Angular, 
+                                    Angular Material and TailwindCSS, and a backend service with Java and Spring, 
+                                    which consumes a PostgreSQL database. Once the work was finished, 
+                                    I deployed the frontend with Netfly and the backend/database with Render.
+                                </p>
+                                <div>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-gray-700 text-gray-300">NestJs</span>
+                                    <span
+                                        class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-red-900 text-red-300">Angular</span>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-orange-900 text-orange-300">Java</span>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-green-900 text-green-300">Spring</span>
+                                    <span
+                                        class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-blue-900 text-blue-300">PostgreSQL</span>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-purple-900 text-purple-300">Python</span>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-yellow-900 text-yellow-300">ElasticSearch</span>
+                                </div>
+                                <div class="flex flex-row gap-6">
+                                    <a target="_blank" [href]="linkTechforbChallengeBack"
+                                    class="text-nowrap mt-6 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-emerald-600 bg-emerald-700 focus:ring-emerald-800">
+                                    Backend repository
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                    <a target="_blank" [href]="linkTechforbChallengeFront"
+                                    class="text-nowrap mt-6 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-emerald-800 bg-emerald-700 focus:ring-emerald-800">
+                                    Frontend repository
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                    <a target="_blank" [href]="linkTechforbChallenge"
+                                    class="text-nowrap mt-6 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-emerald-900 bg-emerald-700 focus:ring-emerald-800">
+                                    Frontend deployed
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pl-6">
+                                <img class="rounded-lg max-w-[240px] h-auto" src="Captura de pantalla 2025-02-28 191613.png" alt="img-page-login-challenge">
+                                <p class="my-2 font-normal text-xs text-[#808080]">( Login page )</p>
+                            </div>
+                        </div>
+                    </aside>
+                </li>
+                <li>
+                    <aside>
+                        <div class="max-w-5xl p-6 bg-[#0000008f] border border-[#ffffff27] rounded-lg shadow-sm flex flex-row gap-6">
+                            <div class="flex flex-col">
+                                <h5 class="mb-1 text-2xl font-medium tracking-wider text-nowrap">
+                                    Techforb Full Stack Challenge</h5>
+                                <p class="mb-3 text-[14px] font-thin text-gray-100">
+                                    ( February, 2025 )
+                                </p>
+                                <p class="mb-3 font-normal text-gray-200">
+                                    - Techforb asked me to do a challenge for their selection process. 
+                                    I had to create an application with Angular, 
+                                    Angular Material and TailwindCSS, and a backend service with Java and Spring, 
+                                    which consumes a PostgreSQL database. Once the work was finished, 
+                                    I deployed the frontend with Netfly and the backend/database with Render.
+                                </p>
+                                <div>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-gray-700 text-gray-300">NestJs</span>
+                                    <span
+                                        class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-red-900 text-red-300">Angular</span>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-orange-900 text-orange-300">Java</span>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-green-900 text-green-300">Spring</span>
+                                    <span
+                                        class="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-blue-900 text-blue-300">PostgreSQL</span>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-purple-900 text-purple-300">Python</span>
+                                    <span
+                                        class=" text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-yellow-900 text-yellow-300">ElasticSearch</span>
+                                </div>
+                                <div class="flex flex-row gap-6">
+                                    <a target="_blank" [href]="linkTechforbChallengeBack"
+                                    class="text-nowrap mt-6 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-emerald-600 bg-emerald-700 focus:ring-emerald-800">
+                                    Backend repository
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                    <a target="_blank" [href]="linkTechforbChallengeFront"
+                                    class="text-nowrap mt-6 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-emerald-800 bg-emerald-700 focus:ring-emerald-800">
+                                    Frontend repository
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                    <a target="_blank" [href]="linkTechforbChallenge"
+                                    class="text-nowrap mt-6 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-emerald-900 bg-emerald-700 focus:ring-emerald-800">
+                                    Frontend deployed
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pl-6">
+                                <img class="rounded-lg max-w-[240px] h-auto" src="Captura de pantalla 2025-02-28 191613.png" alt="img-page-login-challenge">
+                                <p class="my-2 font-normal text-xs text-[#808080]">( Login page )</p>
+                            </div>
+                        </div>
+                    </aside>
+                </li>
+            </ul>
+        </div>
+    </article>
 </div>
-<router-outlet />

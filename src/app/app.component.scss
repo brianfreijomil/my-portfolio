@@ -1,11 +1,65 @@
 .back-app {
     background-image: url("../../public/pexels-ahmetyuksek-30289797.jpg");
-    background-size: cover; 
+    background-size: cover;
 }
+
 header {
     background-color: transparent;
-    transition: all 0.8 linear;
+    border-bottom: 0px;
 }
+
 header:hover {
-    background-color: rgba(255, 255, 255, 0.098);
+    background-color: rgba(0, 0, 0, 0.562);
+    backdrop-filter: blur(10px);
 }
+
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.562);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.151);
+}
+
+.translate-a .mat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-icons {
+    font-size: 18px;
+}
+
+.icon-contact {
+    filter: invert(100%) sepia(4%) saturate(10%) hue-rotate(180deg) brightness(96%) contrast(98%);
+}
+
+.cont-title-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+.cont-title-section .mat-icon {
+    font-size: 20px;
+}
+
+
+// .arrow-btn {
+//     position: absolute;
+//     bottom: -40px;
+//     left: 180px;
+//     font-size: 24px;
+//     animation: mover 1s infinite alternate ease-in-out;
+// }
+
+// @keyframes mover {
+//     from {
+//         transform: translateY(0);
+//     }
+
+//     to {
+//         transform: translateY(10px);
+//     }
+// }
