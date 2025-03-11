@@ -1,6 +1,8 @@
 .back-app {
-    background-image: url("../../public/pexels-ahmetyuksek-30289797.jpg");
+    background-image: url("../../public/bg-portf.png");
     background-size: cover;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease;
 }
 
 header {
@@ -67,3 +69,17 @@ header:hover {
 //         transform: translateY(10px);
 //     }
 // }
+
+.section-x {
+    padding-top: 150px;
+    // min-height: 100vh;
+    background: linear-gradient(to top, rgba(16, 16, 16, 1), transparent);
+}
+
+.img-avatar {
+    border: 2px solid #6160607d;
+}
+
+.link-hover:hover {
+    text-decoration-line: underline;
+}

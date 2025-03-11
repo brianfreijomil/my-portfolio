@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon'
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-root',
-  imports: [MatIconModule],
+  imports: [MatIconModule,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -20,6 +23,8 @@ export class AppComponent implements AfterViewInit {
 
   @ViewChild('backApp') backApp!: ElementRef;
   scrolled = false;
+  
+  constructor(private http: HttpClient) {}
 
   ngAfterViewInit() {
     if (this.backApp) {
@@ -27,6 +32,20 @@ export class AppComponent implements AfterViewInit {
         this.scrolled = this.backApp.nativeElement.scrollTop > 30;
       });
     }
+  }
+
+  downloadResumeEn() {
+    this.http.get('brian-freijomil-en-cv.pdf', { responseType: 'blob' }).subscribe((blob: Blob) => {
+      saveAs(blob, 'brian-freijomil-en-cv.pdf');
+    });
+
+  }
+
+  downloadResumeEs() {
+    this.http.get('brian-freijomil-cv.pdf', { responseType: 'blob' }).subscribe((blob: Blob) => {
+      saveAs(blob, 'brian-freijomil-cv.pdf');
+    });
+
   }
 
 }

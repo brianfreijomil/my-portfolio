@@ -12,8 +12,8 @@
                     </a>
                 </li>
                 <li><a class="tracking-wide" href="#work">Work</a></li>
+                <li><a class="tracking-wide" href="#skills">Skills</a></li>
                 <li><a class="tracking-wide" href="#about">About</a></li>
-                <li><a class="tracking-wide" href="#cv">CV</a></li>
             </ul>
         </nav>
     </header>
@@ -24,15 +24,19 @@
             </h2>
         </div>
         <div class="pb-4">
-            <p class="tracking-wide text-[18px] font-medium">
+            <p class="tracking-wide font-thin text-2xl">
                 Full Stack Developer based in Tandil, (Bs As, Argentina).
             </p>
         </div>
-        <div class="w-[52%]">
-            <p class="tracking-wide text-ms font-thin">
-                I am 24 years old and I consider myself a proactive, responsible and creative person. I am looking to
-                collaborate in a great team, contribute ideas and learn from experienced professionals. I am always in
-                constant learning.
+        <div class="w-[60%]">
+            <p class="tracking-wide font-thin text-md bg-black-op p-1 my-1.5">
+                I consider myself a proactive, responsible and creative person.
+            </p>
+            <p class="tracking-wide font-thin text-md bg-black-op p-1 my-1.5">
+                I am looking to collaborate in a great team, contribute ideas and learn from experienced professionals.
+            </p>
+            <p class="tracking-wide font-thin text-md bg-black-op p-1 my-1.5">
+                I am always in constant learning.
             </p>
         </div>
         <div class="get-to-know-me relative w-[76%] flex flex-row py-8 gap-6">
@@ -47,14 +51,12 @@
                     <img class="icon-contact w-full h-auto" src="GITHUB_icon-icons.com_65505.svg" alt="github-icon-svg">
                 </div>
             </a>
-            <a>
-                <div class="w-[24px] h-auto">
-                    <img class="icon-contact w-full h-auto" src="gmail_icon-icons.com_65490.svg" alt="gmail-icon-svg">
-                </div>
-            </a>
         </div>
+        <p class="tracking-wide font-thin text-sm mt-2 text-gray-300">
+            What are you waiting for? Keep scrolling to meet me!
+        </p>
     </main>
-    <article class="flex flex-col pl-20 py-8">
+    <article id="work" class="flex flex-col pl-20 py-16">
         <div class="cont-title-section flex flex-row items-center mb-6">
             <mat-icon>work</mat-icon>
             <h3 class="text-[22px] tracking-wide font-medium ">
@@ -229,7 +231,7 @@
             </ul>
         </div>
     </article>
-    <article class="flex flex-col pl-20 py-8 mt-8">
+    <article id="skills" class="flex flex-col pl-20 py-8 mt-8">
         <div class="cont-title-section flex flex-row items-center mb-6">
             <mat-icon>stars</mat-icon>
             <h3 class="text-[22px] tracking-wide font-medium ">
@@ -291,7 +293,7 @@
                                 </li>
                                 <li>
                                     <p class="mb-3 font-normal text-gray-200">
-                                        * ( Testing ) Postman, Junit, Mockito
+                                        * ( Testing ) Postman, Swagger, Junit, Mockito, JMater
                                     </p>
                                 </li>
                             </ul>
@@ -299,6 +301,86 @@
                     </aside>
                 </li>
             </ul>
+        </div>
+    </article>
+    <article #about id="about" class="flex flex-col pl-20 py-8 mt-8 w-full section-x">
+        <div class="cont-title-section flex flex-row items-center mb-6">
+            <mat-icon>info</mat-icon>
+            <h3 class="text-[22px] tracking-wide font-medium ">
+                ABOUT ME
+            </h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left">
+            <div class="flex flex-col gap-6">
+                <p class="font-thin text-xl">
+                    💡 I am passionate about software development with a strong curiosity about technology.
+                    I love solving problems, learning new tools, and creating efficient solutions.
+                    I enjoy working in a team and facing new challenges that help me grow professionally.
+                </p>
+                <p class="font-thin text-xl">🎓 I completed the University Degree in Computer Applications Development
+                    (TUDAI) at UNICEN.</p>
+                <p class="font-thin text-xl pb-6 border-b border-solid border-white">📚 Currently studying Systems Engineering at the same university.</p>
+            </div>
+            <div class="md:mx-8 w-58 h-58 mx-auto">
+                <img src="https://github.com/brianfreijomil.png" alt="Perfil de GitHub"
+                    class="img-avatar rounded-full w-full h-full">
+            </div>
+        </div>
+        <div class="mt-4 max-w-[70%] flex flex-col gap-6">
+            <p class="font-thin text-xl">
+                🚀 I am currently developing two personal projects.
+            </p>
+            <p class="font-thin text-md">
+                ⚽ One is a management system for football clubs,
+                focused on training, analysis, scouting and statistics, to improve administration and sports
+                performance.
+            </p>
+            <p class="font-thin text-md">
+                🔍 The other is an application that facilitates the search for premises, services and places in a city,
+                offering a more direct and efficient alternative than social networks.
+            </p>
+            <p class="font-thin text-md pb-6 border-b border-solid border-white">
+                These projects allow me to continue learning and applying my knowledge in software development.
+            </p>
+        </div>
+        <div class="flex flex-col gap-6 mt-18">
+            <p class="font-thin text-xl">
+                📩 Want to chat about technology or collaborate on a project? Contact me!
+            </p>
+        </div>
+        <div class="flex flex-col gap-6 mt-10">
+            <a target="_blank" [href]="linkLinkedin" class="flex flex-row gap-3 cursor-pointer link-hover pl-4">
+                <div class="w-[18px] h-auto">
+                    <img class="icon-contact w-full h-auto" src="LINKEDIN_icon-icons.com_65488.svg"
+                        alt="linkedin-icon-svg">
+                </div>
+                <p class="text-md font-thin">Go to my linkedin profile</p>
+            </a>
+            <a target="_blank" [href]="linkGitHub" class="flex flex-row gap-3 cursor-pointer link-hover pl-4">
+                <div class="w-[18px] h-auto">
+                    <img class="icon-contact w-full h-auto" src="GITHUB_icon-icons.com_65505.svg" alt="github-icon-svg">
+                </div>
+                <p class="text-md font-thin">Check out my GitHub</p>
+            </a>
+            <div class="flex flex-row gap-3 link-hover pl-4">
+                <div class="w-[18px] h-auto">
+                    <img class="icon-contact w-full h-auto" src="gmail_icon-icons.com_65490.svg"
+                        alt="email-icon-svg">
+                </div>
+                <p class="text-md font-thin">{{email}} , Send me an email!</p>
+            </div>
+            <div (click)="downloadResumeEn()" class="flex flex-row gap-3 cursor-pointer link-hover pl-4">
+                <div class="w-[18px] h-auto">
+                    <mat-icon>book</mat-icon>
+                </div>
+                <p class="text-md font-thin inline-block">Download and see my resume! (English)</p>
+            </div>
+            <div (click)="downloadResumeEs()" class="flex flex-row gap-3 cursor-pointer link-hover pl-4">
+                <div class="w-[18px] h-auto">
+                    <mat-icon>book</mat-icon>
+                </div>
+                <p class="text-md font-thin inline-block">Download and see my resume! (Spanish)</p>
+            </div>
         </div>
     </article>
 </div>
